@@ -21,6 +21,6 @@ module.exports = class LoginRouter {
     if (!accessToken) {
       return HttpResponse.invalidCredentialError()
     }
-    return HttpResponse.ok()
+    return HttpResponse.ok({ accessToken })
   }
 }
