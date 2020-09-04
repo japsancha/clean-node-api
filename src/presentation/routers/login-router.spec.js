@@ -50,7 +50,7 @@ describe('Login Router', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
-        email: 'any_mail@mail.com'
+        email: 'any_email@mail.com'
       }
     }
     const httpResponse = await sut.route(httpRequest)
