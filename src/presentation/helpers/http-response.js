@@ -1,6 +1,4 @@
-const InvalidCredentialError = require('./invalid-credential-error')
-const UnAuthorizedError = require('./unauthorized-error')
-const ServerError = require('./server-error')
+const { InvalidCredentialError, UnAuthorizedError, ServerError } = require('../errors')
 module.exports = class HttpResponse {
   static badRequest (error) {
     return {
