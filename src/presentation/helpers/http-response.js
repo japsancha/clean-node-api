@@ -1,4 +1,4 @@
-const { InvalidCredentialError, UnAuthorizedError, ServerError } = require('../errors')
+const { UnAuthorizedError, ServerError } = require('../errors')
 module.exports = class HttpResponse {
   static badRequest (error) {
     return {
@@ -14,16 +14,9 @@ module.exports = class HttpResponse {
     }
   }
 
-  static invalidCredentialError () {
-    return {
-      statusCode: 401,
-      body: new InvalidCredentialError()
-    }
-  }
-
   static unAuthorizedError () {
     return {
-      statusCode: 403,
+      statusCode: 401,
       body: new UnAuthorizedError()
     }
   }
