@@ -220,7 +220,7 @@ describe('Auth UseCase', () => {
     )
     for (const sut of suts) {
       const promise = sut.auth('any_email@mail.com', 'any_password')
-      await expect(promise).rejects.toThrow()
+      expect(promise).rejects.toThrow()
     }
   })
 
@@ -250,7 +250,7 @@ describe('Auth UseCase', () => {
     )
     for (const sut of suts) {
       const promise = sut.auth('any_email@mail.com', 'any_password')
-      await expect(promise).rejects.toThrow()
+      expect(promise).rejects.toThrow()
     }
   })
 })

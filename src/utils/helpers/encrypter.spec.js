@@ -29,7 +29,7 @@ describe('Encrypter', () => {
 
   test('Should throw if no params are provided', async () => {
     const sut = makeSut()
-    await expect(sut.compare()).rejects.toThrow(new MissingParamError('value'))
-    await expect(sut.compare('any_value')).rejects.toThrow(new MissingParamError('hash'))
+    expect(sut.compare()).rejects.toThrow(new MissingParamError('value'))
+    expect(sut.compare('any_value')).rejects.toThrow(new MissingParamError('hash'))
   })
 })
